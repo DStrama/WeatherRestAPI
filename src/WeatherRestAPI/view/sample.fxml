@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WeatherRestAPI.controllers.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Current Weather">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="460.0" prefWidth="652.0">
+                           <children>
+                              <Text layoutX="46.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+                              <Text layoutX="46.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+                              <TextField fx:id="idCityCurrent" layoutX="124.0" layoutY="35.0" onAction="#writingCityCurrent" text="enter city" />
+                              <TextField fx:id="idCountryCurrent" layoutX="124.0" layoutY="85.0" onAction="#writingCountryCurrent" text="enter country" />
+                              <Button fx:id="idGetWeatherCurrent" layoutX="338.0" layoutY="54.0" mnemonicParsing="false" onAction="#getWeatherCurrent" prefHeight="36.0" prefWidth="99.0" text="Get Weather" />
+                              <ImageView fx:id="isCurrentImage" fitHeight="100.0" fitWidth="100.0" layoutX="180.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="idCurrentLabel" layoutX="420.0" layoutY="234.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Five Day Weather Forecast">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="460.0" prefWidth="652.0">
+                           <children>
+                              <Text layoutX="46.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+                              <Text layoutX="46.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" />
+                              <TextField fx:id="idCityForecast" layoutX="124.0" layoutY="35.0" onAction="#writingCityForecast" text="enter city" />
+                              <TextField fx:id="idCountryForecast" layoutX="124.0" layoutY="85.0" onAction="#writincCountryForecast" text="enter country" />
+                              <Button fx:id="isGetWeatherForecast" layoutX="338.0" layoutY="54.0" mnemonicParsing="false" onAction="#getWeatherForecast" prefHeight="36.0" prefWidth="99.0" text="Get Weather" />
+                              <ImageView fx:id="idForecastOne" fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="idForecastTwo" fitHeight="100.0" fitWidth="100.0" layoutX="145.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="idForecastThree" fitHeight="100.0" fitWidth="100.0" layoutX="252.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="idForecastFour" fitHeight="100.0" fitWidth="100.0" layoutX="370.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="idForecastFive" fitHeight="100.0" fitWidth="100.0" layoutX="499.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="idForecastLabelOne" layoutX="40.0" layoutY="274.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Label>
+                              <Label fx:id="idForecastLabelTwo" layoutX="159.0" layoutY="274.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Label>
+                              <Label fx:id="idForecastLabelThree" layoutX="285.0" layoutY="274.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Label>
+                              <Label fx:id="idForecastLabelFour" layoutX="403.0" layoutY="274.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Label>
+                              <Label fx:id="idForecastLabelFive" layoutX="532.0" layoutY="274.0">
+                                 <font>
+                                    <Font size="8.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
